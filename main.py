@@ -15,7 +15,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.end_headers()
         with open('contacts.html', 'r', encoding='utf-8') as file:
             page = file.read()
-        self.wfile.write(bytes("{'message': 'OK'}", "utf-8"))
+        self.wfile.write(bytes(page, "utf-8"))
 
 if __name__ == "__main__":
 
